@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>4주차 과제에 5주차 적용</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .flex-box {
+      display: flex;
+      margin: 20px ;
+      padding: 10px;
+    }
+    .flex-item {
+      width: 1000px; height: 30px;
+      margin: 5px;
+      background-color: white;
+    }
+    .image-box{
+       width: 96%;
+        height: 500px;
+      margin: 10px;
+      padding: 10px;
+      background-color: gray;
+      font-size: larger;
+
+    }
+    .word-box{
+        width: 30%;
+        height: 99.9%;
+        background-color: white;
+    }
+    .left-float { 
+        float: left; 
+    }
+    .right-float { 
+        float: right; 
+    }
+    .container {
+      display: grid;
+      grid-template: repeat(2, 100px) / repeat(2, 1fr); 
+      row-gap: 10px;
+      column-gap: 20px;
+    }
+    .special {
+      border: 1px solid #333;
+      width: 9%; height: 80%;
+      margin: 30px 10px;
+      background-color: skyblue;
+      transition-duration: 1.5s;
+    }
+    .special:hover{
+      width: 90%;
+    }
+    .main-box{
+        margin: 550px 10px;
+        width: 96.5%; height: 1000px;
+        border: 2px solid black;
+        background-image: "./image/01.jpg";
+    }
+    .next-box{
+        width: 96.5%; height: 1000px;
+    }
+    aside {
+        margin: 10px;
+      width: 300px;
+      margin-right: 60px;
+      float: left;
+    }
+    section {
+        margin: 10px;
+      width: 500px;
+      float: left;
+    }
+    .wrap { 
+        overflow: hidden; 
+    }
+    .H1{
+      transform : translateX(50px);
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <button id="menu-button">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <button id="homepage-name">
+            <p>My Home Page</p>
+        </button>
+      </header>
+
+      <nav id="side-menu" class="hidden">
+        <ul>
+          <li><a href="#">Menu 1</a></li>
+          <li><a href="#">Menu 2</a></li>
+          <li><a href="#">Menu 3</a></li>
+          <li><a href="#">Menu 4</a></li>
+          <li><a href="#">Menu 5</a></li>
+          <li><a href="#">Menu 6</a></li>
+          <li><a href="#">Menu 7</a></li>
+          <li><a href="#">Menu 8</a></li>
+        </ul>
+      </nav>
+      <script>
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+    
+        menuButton.addEventListener('click', () => {
+          if (hidden) {
+            sideMenu.classList.remove('hidden');
+            hidden = false;
+          } else {
+            sideMenu.classList.add('hidden');
+            hidden = false;
+          }
+        });
+      </script>
+  <div class="flex-box">
+  </div>
+  <div class="image-box left-float">Image position
+    <div class="word-box right-float">
+      <div class="ball">
+        <h1>Welcome To My Homepage</h1>
+      </div>
+    </div>
+    <div class="container">
+        <div class="special">Item 1</div>
+        <div class="special">Item 2</div>
+        <div class="special">Item 3</div>
+        <div class="special">Item 4</div>
+        <div class="special">Item 5</div>
+        <div class="special">Item 6</div>
+        <div class="special">Item 7</div>
+        <div class="special">Item 8</div>
+      </div>
+   </div>
+   <div class="main-box">
+        <aside>
+          <h1>MAIN 1</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, modi sint ea suscipit assumenda quis neque id ut minus ab, quas, quod exercitationem omnis aliquam rerum tempore laboriosam a facere? Perferendis laborum alias cumque in similique amet. Saepe maxime deserunt cupiditate voluptatem maiores odio? Veritatis qui quaerat voluptas perspiciatis fuga temporibus officia quisquam itaque officiis dolorum tempore repellendus natus voluptatem voluptate vel amet, quidem vero consequatur laboriosam eligendi ipsum incidunt enim! Quae repellat iste delectus fugit nostrum ex atque laborum. Animi a impedit reiciendis voluptatibus fugiat vel, doloremque cupiditate quas. Dolorum rem fuga suscipit autem ducimus voluptas explicabo necessitatibus est atque eum ratione veniam praesentium minus vel, eveniet ut a dignissimos modi quia assumenda corrupti exercitationem dolorem! Dicta maxime velit labore. Ratione tempore sunt sint temporibus dolor accusantium? Maxime fugiat possimus animi laboriosam eligendi rerum dolore pariatur illo ea aperiam sequi porro cum quaerat, minima explicabo earum ad sunt harum!</p>
+        </aside>
+        <section>
+          <h1>MAIN 2</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsa laudantium sunt consequatur nam mollitia in dicta aliquid asperiores possimus omnis culpa similique itaque quas blanditiis fuga, voluptates fugit id. Consectetur modi at asperiores similique, facilis, assumenda nostrum animi inventore reiciendis, ex accusamus. Voluptate repellat fuga quos! Commodi voluptatum, vitae enim ab quasi reiciendis iste, excepturi nesciunt dolorem assumenda odio expedita esse dolore quidem, in delectus nam! Veritatis laudantium at id cumque in. Impedit fugiat fuga, atque ut, deserunt rerum perferendis eligendi sed dicta dolore similique aspernatur incidunt! Itaque recusandae impedit expedita rem nihil, ullam corporis autem numquam voluptate tempore qui unde et quisquam ex quasi repudiandae nisi officia natus sapiente cumque! Unde eos cumque harum. Sit facere error laborum, repudiandae nobis, quis nemo corporis id exercitationem alias explicabo iusto. Dolore similique neque, voluptates quaerat, optio cupiditate corporis suscipit est incidunt, assumenda rem maxime explicabo architecto iusto delectus repudiandae ab aliquid beatae quae quos consectetur eligendi facere commodi. Praesentium, modi! Sapiente, dolorem atque! Rem quo odio aperiam assumenda quae esse, aut quisquam exercitationem architecto laudantium alias! Dolore recusandae facilis placeat veniam minima! Fugiat quis, consequatur totam nulla temporibus commodi tempora tempore laboriosam dolorem deserunt voluptas. Minima aliquid optio maxime possimus cumque exercitationem alias recusandae quo, architecto ratione odit. Sed esse ad atque exercitationem dolore illum eos quidem beatae architecto dolor ab placeat consequuntur, porro explicabo! Impedit odit sapiente recusandae modi. Laborum corrupti accusantium dignissimos, ea mollitia excepturi repellendus recusandae ipsa ut possimus sapiente similique exercitationem labore veniam sequi eveniet sed.</p>
+        </section>
+    <div>
+        <h1>MAIN 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In modi eligendi maiores labore nemo accusantium ab sunt numquam necessitatibus odio eaque, excepturi inventore dolorum maxime porro, exercitationem blanditiis, nesciunt ea iusto a. Quaerat a natus vitae! Delectus neque, nesciunt similique deleniti voluptate illum ex accusamus, tenetur adipisci ipsam nostrum tempora voluptatum reiciendis optio nam impedit quod, excepturi animi velit ut! Quaerat voluptatum quas at labore aperiam ex tenetur modi facilis soluta recusandae reiciendis earum consequuntur magni placeat reprehenderit molestiae, impedit architecto? Quas, non distinctio. Commodi est quasi iusto dignissimos reprehenderit dolore asperiores porro illum maxime corrupti autem aperiam laboriosam aspernatur quod, id assumenda. Ipsam asperiores voluptate similique nostrum quod libero, nulla at repellat quas laboriosam? Id placeat accusantium accusamus soluta magnam repellat ad quaerat, ab molestias, odio facilis nisi enim, minus velit nemo doloribus. Officiis repellendus earum, a at hic ex eligendi delectus! Alias, impedit voluptates, ratione sit vitae iusto modi reiciendis animi quia omnis odio id aliquid sapiente. Porro soluta, dolor natus cumque doloribus velit facilis obcaecati enim dolores vero sint sit nostrum dolorum. Numquam enim et consequatur velit architecto. Ea eligendi maiores dolorum dolorem ullam. Odio ex adipisci, laboriosam voluptatem enim minus a dolorem sed praesentium totam fuga tenetur ratione rerum quasi excepturi corporis modi quaerat? Laboriosam, sint! Ullam, voluptate? Dignissimos reprehenderit quisquam quaerat eveniet dolor distinctio debitis adipisci aut. Omnis, quasi voluptatum! Fuga corporis incidunt debitis odio dolore, quo impedit voluptates. Culpa veritatis iure accusantium quasi rem aperiam explicabo, ducimus quod incidunt quis nesciunt, doloribus voluptates ratione. Soluta, natus debitis fugiat ad eveniet sed repudiandae numquam modi voluptate mollitia, dolorem ut dolores, earum commodi aliquam fuga ea distinctio velit tempore nulla accusantium delectus. Dolorem doloremque tenetur eum doloribus, totam voluptates quo earum exercitationem numquam odit hic enim, incidunt non, nemo quas eius aut dicta atque. Beatae praesentium dolorem, quidem sed exercitationem harum dolor rem eum blanditiis placeat aliquam quaerat cumque. Ipsum error libero eaque accusamus doloribus molestias. Minus quas ipsum repellendus quaerat amet dolores reprehenderit iste perferendis laborum doloremque adipisci accusantium molestias rerum temporibus unde possimus necessitatibus numquam est architecto quam, maxime error. Molestias rem assumenda quod quasi laboriosam voluptatum laudantium amet voluptas impedit accusamus. Asperiores quos velit distinctio ut hic iste veritatis corporis tempore, et nihil architecto a. Veniam beatae vitae earum dolor laudantium tenetur quisquam amet qui maxime consequatur, rerum incidunt impedit eos nostrum illum nam non recusandae? Eveniet dolorum doloremque optio et, reprehenderit odio suscipit rem, doloribus, earum esse nam porro consequatur praesentium architecto. Molestias consectetur blanditiis maiores est perferendis animi commodi ab velit veniam explicabo, earum fugit quidem expedita nemo doloremque sapiente placeat amet unde necessitatibus molestiae nobis at sint laboriosam? At, aut nulla repellat laborum quibusdam dolorem quo voluptatibus eaque, quos quaerat, unde quae. Dicta perspiciatis ut molestias enim voluptates sequi possimus sit cum odit tempora vel excepturi quidem ad voluptatum recusandae fuga, magni veritatis aliquid! Voluptatem maiores eveniet beatae mollitia saepe fugit dolorem! Unde sint quisquam explicabo beatae, sed delectus atque quod ad accusamus voluptates molestiae sit ab repellat inventore. Doloremque.</p>
+    </div> 
+   </div>   
+</body>
+</html>
