@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    height: 60px;
+}
+
+#homepage-name:hover{
+    font-size: large;
+    border: none;
+    transition-duration: 3s;
+}
+
+main {
+    margin: 60px auto 0; /* margin-top을 header가 차지하는 만큼 줌 */
+    padding: 2em 4em;
+}
+
+#menu-button {
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 2em;
+  }
+  
+  #menu-button:focus {
+    outline: none;
+  }
+  
+  #menu-button > .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 1.5px;
+    margin: 3px auto;
+  }
+  #menu-button:hover > .bar{
+    transform : rotate(90deg);
+    transition-duration: 2s;
+  }
+  
+  #side-menu {
+    position: fixed;
+    top: 60px; /* header의 높이 다음에 나올 수 있도록 */
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #ddd;
+  background-color: #eee;
+  width: 200px;
+  padding: 10px 20px;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+  transition-duration: 500ms;
+}
+
+#side-menu.hidden {
+  left: -100%;
+}
+
+#side-menu > ul {
+  list-style: none;
+}
+
+#side-menu > ul > li {
+  margin: 20px 0;
+}
+
+#side-menu > ul > li > a {
+  text-decoration: none;
+  color: #555;
+}
+
+#side-menu > ul > li > a:hover {
+    font-weight: bold;
+    color: #222;
+}
+
+.ball {
+  position: absolute;
+  width: 610px; height: 500px;
+  border-radius: 10%;
+  text-align: center;
+  background: linear-gradient(red 0%, blue 100%);
+
+  animation-name: ball;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.ball > h1 {
+  line-height: 500px;
+}
+
+@keyframes ball {
+  from {
+    left: 100%;
+
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 50%;
+  }
+  to {
+    left: 70%;
+    transform: rotate(360deg);
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+  transition-duration: 500ms;
+  opacity: 0.5;
+  transform : translateZ(-10px)
+}
+
+
+
+
+  
+
+  
